@@ -1,0 +1,112 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Add Project {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+
+    #second{
+        display: none;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+        <div class="row d-flex flex-row justify-content-between mb-3 pr-5 pl-5"> 
+            <h1 class="page-title">
+                Add Company User
+            </h1>
+        </div>
+        <div class="row">        
+            <div class="col-lg-6 col-sm-12 d-flex flex-column pl-5 pr-5">                
+                <form class="mt-5">
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Enter User's Username">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Enter User's Email">
+                    </div>   
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Enter User's Phone Number">
+                    </div>    
+                    <div class="form-group">
+                        <label class="form-label">Role</label>
+                        <select name="beast" id="select-beast" class="form-control custom-select" onchange="showField(this)">
+                            <option value="1">CEO</option>
+                            <option value="2">CTO</option>
+                            <option value="3">Manager</option>
+                            <option value="4">Employee</option>
+                        </select>
+                    </div> 
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="example-text-input" placeholder="Enter User's New Password">
+                    </div>         
+                    <div class="form-group">
+                      <div class="form-label">Upload User Profile Picture</div>
+                      <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>  
+                    </div>             
+                    <button class="btn custom-orange-btn">Save</button>
+                </form>           
+            </div>        
+           
+        </div>
+    </div>    
+</div>
+
+<br>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+        
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+    
+            $('#select-beast').selectize({});
+
+        });
+    });
+
+
+    function showField(sel){
+        if(sel.value == 1){
+            $('#first').show();
+            $('#second').hide();
+        }else{
+            $('#second').show();
+            $('#first').hide();
+        }
+    }
+</script>
+
+
+{% endblock javascripts %}

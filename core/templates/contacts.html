@@ -1,0 +1,229 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Contacts {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+
+    .card:hover{
+        background: #eee;
+    }
+
+    .textarea-container {
+        position: relative;
+    }
+    .textarea-container textarea {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .textarea-container button {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+
+        <div class="page-header d-flex flex-row align-items-center justify-content-between">
+            <h1 class="page-title">
+                Messages
+            </h1>
+        </div>
+        
+        <div class="profile-container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="white-container pt-1 pb-5 pl-3 pr-3 div-rounded" style="height: 500px;">
+                        <div class="row">        
+                            <div class="col-lg-3 col-sm-12 d-flex flex-column pl-3 pr-3 ">                
+                                <form class="mt-5">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Search">
+                                    </div>                                                      
+                                </form>       
+                                <div class="border-bottom pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div>    
+                                <div class="mt-4 border-bottom pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div> 
+                                <div class="mt-4 border-bottom pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div>
+                                <div class="mt-4 border-bottom pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div>
+                                <div class="mt-4 border-bottom pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div>
+                                <div class="mt-4 pb-3">
+                                    <a href="#" style="text-align:center;margin-top:20px;"><img style="height:40px; width:40px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                                        <strong>John Doe</strong>
+                                    </a>                
+                                </div>
+                            </div>        
+                            <div class="col-lg-9 col-sm-12 d-flex flex-column pl-3 pr-3 border-left">
+                                <form class="mt-5">
+                                    <div class="col-12 d-flex flex-row p-3" style="background-color: #E7ECF1; border-radius: 5px">
+                                        <p>John Doe</p>
+                                    </div>
+                                    <div class="form-group textarea-container" style="margin-top: 300px;">
+                                        <textarea class="form-control" name="example-textarea-input" rows="3" placeholder="Message"></textarea>
+                                        <button class="btn custom-orange-btn-sm btn-sm">Send</button>
+                                    </div>                                                        
+                                </form>           
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="white-container pr-3 pl-3 pt-5 pb-5 div-rounded">
+                        <h5>Running Projects</h5>
+                        <div class="card">
+                            <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                            <div class="card-body card-body-aside d-flex flex-row p-0">
+                                <div class="col-md-12 p-0">
+                                    <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                                    <span class="text-danger">Deadline: 10 May, 2020</span> 
+                                </div>                                                               
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                            <div class="card-body card-body-aside d-flex flex-row p-0">
+                                <div class="col-md-12 p-0">
+                                    <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                                    <span class="text-danger">Deadline: 10 May, 2020</span>                                
+                                </div>                                 
+                            </div>
+                        </div> 
+                        <div class="card">
+                            <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                            <div class="card-body card-body-aside d-flex flex-row p-0">
+                                <div class="col-md-12 p-0">
+                                    <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                                    <span class="text-danger">Deadline: 10 May, 2020</span>
+                                </div>                                 
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>    
+</div>
+
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="addToPool" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Add Student to Your Talent Pool</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn custom-orange-btn">Add to Pool</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

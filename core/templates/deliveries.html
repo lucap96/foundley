@@ -1,0 +1,295 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Deliveries {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+
+    .fa-star{
+      color: grey;
+    }
+
+    .checked{
+      color: #ffc000;
+    }
+
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+
+        <div class="page-header d-flex flex-row align-items-center justify-content-between">
+         <h1 class="page-title">
+            Deliveries
+            </h1>
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="form-label">Filter:</label>
+                  <select name="beast" id="select-beast" class="form-control custom-select ml-2" style="width: 100px;">
+                    <option value="1">Paid</option>
+                    <option value="2">Unpaid</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select name="beast" id="select-beast-2" class="form-control custom-select ml-2" style="width: 200px;">
+                    <option value="1">Web Development</option>
+                    <option value="2">Artificial Intellifence</option>
+                    <option value="3">Machine Learning</option>
+                  </select>
+                </div>
+              </form>
+        </div>
+
+        <div class="border div-rounded" style="height:auto">
+          <div class="row p-3">            
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/1.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Student Name</a></h4>
+                  <h5><a href="#" style="color: #1568ac">Project Title</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                    <h5><a href="#" style="color: #1568ac;display:block;"><i class="fe fe-download"></i> Download</a></h5>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-danger"  data-toggle="modal" data-target="#rejectDelivery">Reject</button>
+                      <button class="btn btn-outline-success" data-toggle="modal" data-target="#acceptDelivery">Accept</button> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/20.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Student Name</a></h4>
+                  <h5><a href="#" style="color: #1568ac">Project Title</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                    <h5><a href="#" style="color: #1568ac;display:block;"><i class="fe fe-download"></i> Download</a></h5>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-danger"  data-toggle="modal" data-target="#rejectDelivery">Reject</button>
+                      <button class="btn btn-outline-success" data-toggle="modal" data-target="#acceptDelivery">Accept</button> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/male/7.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Student Name</a></h4>
+                  <h5><a href="#" style="color: #1568ac">Project Title</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                    <h5><a href="#" style="color: #1568ac;display:block;"><i class="fe fe-download"></i> Download</a></h5>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-danger"  data-toggle="modal" data-target="#rejectDelivery">Reject</button>
+                      <button class="btn btn-outline-success" data-toggle="modal" data-target="#acceptDelivery">Accept</button> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/male/20.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Student Name</a></h4>
+                  <h5><a href="#" style="color: #1568ac">Project Title</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                    <h5><a href="#" style="color: #1568ac;display:block;"><i class="fe fe-download"></i> Download</a></h5>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-danger"  data-toggle="modal" data-target="#rejectDelivery">Reject</button>
+                      <button class="btn btn-outline-success" data-toggle="modal" data-target="#acceptDelivery">Accept</button> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Student Name</a></h4>
+                  <h5><a href="#" style="color: #1568ac">Project Title</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                    <h5><a href="#" style="color: #1568ac;display:block;"><i class="fe fe-download"></i> Download</a></h5>
+                    <div class="d-flex justify-content-between">
+                      <button class="btn btn-outline-danger" data-toggle="modal" data-target="#rejectDelivery">Reject</button>
+                      <button class="btn btn-outline-success"  data-toggle="modal" data-target="#acceptDelivery">Accept</button> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>                                                 
+          </div>
+        </div>        
+    </div>    
+</div>
+
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="rejectDelivery" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Reject Delivery</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger">Reject</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="acceptDelivery" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Delivery Feedback</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="d-flex flex-row justify-content-between align-items-center">
+              <div>
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:45px; width:45px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/18.jpg" >
+                  <strong>Student's Name</strong>
+                </a>                
+              </div>
+              <button class="btn btn-success btn-sm" style="height: 25px;">Add to Talent Pool</button>
+            </div>
+             <div class="form-group mt-3">
+                <label class="form-label">Talent Pool message <span class="form-label-small">26/50</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="2" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group mt-3 d-flex flex-row justify-content-between align-items-center">
+                <div>
+                  <label class="form-label">Rate the delivery</label>
+                  <i class="fa fa-star checked"></i>
+                  <i class="fa fa-star checked"></i>
+                  <i class="fa fa-star checked"></i>
+                  <i class="fa fa-star checked"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <div>
+                  <div class="form-group mb-4" style="height: 25px">
+                    <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile" name="filename">
+                          <label class="custom-file-label" for="customFile">Upload Document</label>
+                      </div>  
+                  </div>
+                  {% comment %} <button style="height: 25px" class="btn btn-sm btn-outline-primary">Upload Document</button> {% endcomment %}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn custom-orange-btn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+
+  $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
+    
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

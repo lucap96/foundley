@@ -1,0 +1,182 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Portfolio {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+
+    .checked {
+        color: gold;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true" style="color: #222">My Profile</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #222">Completed Projects</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #222">My Applications</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #222">My Deliverables</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false" style="color: #222">Feedbacks</a>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="color: #222">Certifications</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
+                <div class="white-container p-3 div-rounded mt-5">
+                    <div class="page-header d-flex flex-row align-items-center justify-content-between m-0 p-3 border-bottom">
+                    <h3 class="page-title">
+                        Companies Feedback
+                    </h3> 
+                     <form class="form-inline">
+                        <div class="form-group">
+                        <label class="form-label">Search:</label>
+                        <input style="width: 250px;" class="form-control custom-select ml-2" type="text" />                   
+                        </div>               
+                    </form>
+                    </div>          
+                    <br>
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="col-md-1">
+                            <a href="#" style="text-align:center;margin-top:20px;"><img style="height: auto; width:100%;" class="card-img-top rounded-circle" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        </div>
+                        <div class="col-md-10">
+                            <h4><a href="#" class="text-primary">Company Name<a></h4>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>           
+                                             
+                        </div>
+                    </div>
+                    <div class="offset-md-1">
+                        <p class="ml-4">{% lorem 1 b random %}</p>
+                        <p class="ml-4">Dated: 10 May, 2020</p>
+                    </div>
+
+                     <br>
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="col-md-1">
+                            <a href="#" style="text-align:center;margin-top:20px;"><img style="height: auto; width:100%;" class="card-img-top rounded-circle" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        </div>
+                        <div class="col-md-10">
+                            <h4><a href="#" class="text-primary">Company Name<a></h4>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>           
+                                             
+                        </div>
+                    </div>
+                    <div class="offset-md-1">
+                        <p class="ml-4">{% lorem 1 b random %}</p>
+                        <p class="ml-4">Dated: 10 May, 2020</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} <div class="tab-pane fade d-flex justify-content-center" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="col-lg-12 mt-5">
+                    <div class="white-container p-5 div-rounded">
+                        
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        
+
+        
+    </div>    
+</div>
+
+<br>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

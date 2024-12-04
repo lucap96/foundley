@@ -1,0 +1,121 @@
+{% extends "layouts/base-site.html" %}
+
+{% block title %} UI Store {% endblock %} 
+
+{% block content %}
+<div class="container">
+    <div class="brdcrm pt-3 pb-3">
+        <span class="brdcrm"> <a href="#" class="brcrm">Dashboard</a> > <a href="#" class="brcrm">Https:</a> > <a href="#" class="brcrm">Testing.ecoline-croatia.com</a> > Incidents
+        </span>
+    </div>
+    <!-- <span>
+        <div class="title-pri">
+            <h1 class="pr-4">
+                Prijave
+            </h1>
+        </div>
+        <div class="">
+            <h1 class="">
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add New</button>
+                <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Bulk Delete</button>
+            </h1>
+        </div>
+    </span>  -->
+</div>
+<div class="col-12 mt-5" onload="myFunction()">
+    <div class="card">
+      <div class="table-responsive">
+        <table class="table card-table table-vcenter text-nowrap datatable">
+          <thead>
+            <tr>
+                <th class="w-1">Id</th>
+                <th>Datum</th>
+                <th>Vrijeme</th>
+                <th>Grad</th>
+                <th>Razlog</th>
+                <th>Adresa</th>
+                <th>Detalji</th>
+                <th>Korisnik</th>
+                <th>Oznaka</th>
+                <th>Admin Email</th>
+                <th>Incident No</th>
+                <th>Status</th>
+                <th>Grupe Razloga</th>
+                <th>pdf</th>
+                <th>Actions</th>
+                
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="text-muted myText"></span></td>
+              <td><a href="invoice.html" class="text-inherit"></a></td>
+              <td>
+              </td>
+              <td>
+                87956621
+              </td>
+              <td>
+                15 Dec 2017
+              </td>
+              <td>
+                <span class="status-icon bg-success"></span> Paid
+              </td>
+              <td>$887</td>
+              <td><span class="text-muted">001401</span></td>
+              <td>Design Works</td>
+              <td>
+                87956621
+              </td>
+              <td>
+                Carlson Limited
+              </td>
+              <td>
+                87956621
+              </td>
+              <td>
+                15 Dec 2017
+              </td>
+              <td>
+                <a href="#"><img src="/static/assets/images/pdf.png" alt="pdf"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/static/assets/js/require.min.js"></script>
+        <script>
+            $('.table tbody').on('click','.btn-view',function(){
+                var currow = $(this).closest('tr');
+                var col1 = currow.find('td:eq(0)').html();
+                var col2 = currow.find('td:eq(1)').text();
+                var col3 = currow.find('td:eq(2)').text();
+                var col4 = currow.find('td:eq(3)').text();
+                var col5 = currow.find('td:eq(4)').text();
+                var col6 = currow.find('td:eq(5)').text();
+                var col7 = currow.find('td:eq(6)').text();
+                var col8 = currow.find('td:eq(7)').text();
+                var col9 = currow.find('td:eq(8)').text();
+                var col10 = currow.find('td:eq(9)').text();
+                var col11 = currow.find('td:eq(10)').text();
+                var col12 = currow.find('td:eq(11)').text();
+                var result =  col1+'\n'+col2;
+                alert(result);
+
+            })
+
+        </script> -->
+        <script>
+          require(['datatables', 'jquery'], function(datatable, $) {
+                $('.datatable').DataTable();
+              });
+        </script>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+

@@ -1,0 +1,202 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Student Profile {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+
+        <div class="page-header d-flex flex-row align-items-center justify-content-between">
+            <h1 class="page-title">
+                Company's Profile
+            </h1>
+        </div>
+        
+        <div class="profile-container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="white-container p-5 div-rounded">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="d-flex flex-column border div-rounded p-3">
+                                    <div class="d-flex flex-row">
+                                        <strong>Name</strong>
+                                        <p class="text-primary ml-auto">XYZ Company</p>
+                                    </div>   
+                                    <div class="d-flex flex-row">
+                                        <strong>Email</strong>
+                                        <p class="text-primary ml-auto">company@gmail.com</p>
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <strong>Industry</strong>
+                                        <p class="text-primary ml-auto">Information Technology</p>
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <strong>Website</strong>
+                                        <p class="text-primary ml-auto">www.example.com</p>
+                                    </div>                                                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="white-container div-rounded p-0">
+                                    <img class="card-img-top" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one.">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <h4 class="mt-4">Description</h4>
+                                <p>{% lorem 1 b random %}</p>
+                            </div>
+                        </div>                        
+                        <div class="row mt-5">
+                            <div class="col-md-8 offset-2">
+                                <div class="white-container div-rounded p-0">
+                                    <video width="100%" height="220" controls>
+                                        <source src="/static/assets/images/student_video.mp4" type="video/mp4">
+                                        <source src="movie.ogg" type="video/ogg">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    {% comment %} <img class="card-img-top" src="/static/assets/demo/faces/female/27.jpg" alt="And this isn&#39;t my nose. This is a false one."> {% endcomment %}
+                                </div>
+                            </div>
+                 
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="white-container p-5 div-rounded">
+                        <h4>Company's Projects</h4>
+                        <div class="card">
+                            <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                            <div class="card-body card-body-aside d-flex flex-row col-12">
+                                <div class="col-md-12">
+                                    <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                                    <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                    <span class="text-danger">Deadline: 10 May, 2020</span>
+                                    <button class="btn custom-orange-btn-sm mt-3 float-right">Deliver</button>
+                                </div>                                 
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                            <div class="card-body card-body-aside d-flex flex-row col-12">
+                                <div class="col-md-12">
+                                    <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                                    <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                    <span class="text-danger">Deadline: 10 May, 2020</span>
+                                    <button class="btn custom-orange-btn-sm  mt-3 float-right">Deliver</button>
+
+                                </div>                                 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>    
+</div>
+
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="addToPool" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Add Student to Your Talent Pool</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn custom-orange-btn">Add to Pool</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

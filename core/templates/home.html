@@ -1,0 +1,366 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+{% block content %}
+<style>
+    .back{
+        height: 200px;
+        margin-top: -50px;
+        background: skyblue;
+        opacity: 0.2;
+        position: relative;
+        z-index: -1000;
+    }
+
+    .form-group{
+        margin-top: -120px;
+    }
+
+    .blue-box{
+        background-color: #1568ac;
+        text-align: center;
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .light{
+        background: #E7ECF1;
+        padding-top: 2px;
+        padding-bottom: 1px;
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        color: #333;
+        box-shadow: 5px 5px 4px gold;
+    }
+
+    .sky:hover{
+        background: #e1eff5;
+        transition: 0.4s;
+    }
+
+    .fa{
+        font-size: 24px;
+        color: #1568ac;
+    }
+
+    .first{
+        font-size: 22px !important;
+    }
+</style>
+<div class="my-3 my-md-5">
+    <div class="back">
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control custom-select" type="text" placeholder="Search webinars, projects and other learning materials" />                   
+                </div> 
+            </div>
+        </div>
+        <div class="row" style="margin-top: -60px;">
+            <div class="col-md-8">
+                <h3>Project Suggestions</h3>
+                <div class="d-flex flex-row">
+                    <div class="col-md-4 p-1">
+                        <div class="card mt-1 mb-1 mr-1">
+                        <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        <div class="card-body p-">
+                            <h4><a href="#" class="text-primary">Project Title</a></h4>
+                            <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                            <h5 class="mt-3"><a href="#" style="color: #aaa">Dated: 10 May, 2020</a></h5>
+                            <div class=" pt-4 mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a href="/student-project-details.html"><button class="btn btn-outline-primary">See Details</button></a>
+                                <a href="#" class="ml-auto"><button class="btn custom-orange-btn ">Apply</button></a>                    
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-1">
+                        <div class="card m-1">
+                        <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        <div class="card-body p-">
+                            <h4><a href="#" class="text-primary">Project Title</a></h4>
+                            <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                            <h5 class="mt-3"><a href="#" style="color: #aaa">Dated: 10 May, 2020</a></h5>
+                            <div class=" pt-4 mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a href="/student-project-details.html"><button class="btn btn-outline-primary">See Details</button></a>
+                                <a href="#" class="ml-auto"><button class="btn custom-orange-btn ">Apply</button></a>                    
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-1">
+                        <div class="card m-1">
+                        <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        <div class="card-body p-">
+                            <h4><a href="#" class="text-primary">Project Title</a></h4>
+                            <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                            <h5 class="mt-3"><a href="#" style="color: #aaa">Dated: 10 May, 2020</a></h5>
+                            <div class=" pt-4 mt-auto">
+                            <div class="d-flex justify-content-between">
+                                <a href="/student-project-details.html"><button class="btn btn-outline-primary">See Details</button></a>
+                                <a href="#" class="ml-auto"><button class="btn custom-orange-btn ">Apply</button></a>                    
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 d-flex flex-row justify-content-end p-0">
+                    <a href="#" class="text-primary mt-3"><h5>See All Projects</h5></a>
+                </div>
+
+                <div class="col-md-8 offset-4 p-0">
+
+                    <div class="white-container p-4 mt-4 mb-5 div-rounded">
+                        <h4 class="mb-2">Create New Post</h4><hr class="p-3 m-0">
+                        <div class="d-flex flex-row align-items-center">
+                            <a href="#" style="text-align:center;"><img style="height:40px; width:40px; margin-top: -10px;" class="card-img-top rounded-circle" src="/static/assets/demo/faces/female/25.jpg" alt="user"></a>
+                            <div class="ml-3">
+                                <h5 class="mb-2 p-0">John Doe</h5>
+                                <h6 style="color:silver;">Dated: 10 May, 2020</h6>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="mt-3 mb-3">
+                                <textarea rows='4' class="form-control" placeholder="What's on your mind, John?"></textarea>
+                                <div class="custom-file mt-2">
+                                    <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
+                            <button class="col-2 offset-10 btn custom-orange-btn-sm">Post</button>
+                        </form>
+                    </div>
+
+                    <div class="blue-box mt-4 mb-5 div-rounded">
+                        <h3 class="mb-2">Foundley</h3>
+                        <span>Dated: 10 May, 2020</span>
+                        <div class="light mt-3">
+                            <h2 class="m-2">New Feature Release<h2>
+                        </div>
+                        <p class="mt-3 p-3">{% lorem 1 b random %}</p>
+                        <button class="btn custom-orange-btn-sm">Check out!</button>
+                    </div>
+
+                    <div class="feed">
+                        <div class="white-container mt-4 mb-5 div-rounded p-4">
+                            <div class="d-flex flex-rows align-items-center">
+                                <a href="#" style="text-align:center;"><img style="height:60px; width:60px;" class="card-img-top rounded-circle" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                                <div class="ml-3">
+                                    <h4 class="mb-2">Foundley</h4>
+                                    <h6 style="color:silver;">Dated: 10 May, 2020</h6>
+                                </div>
+                            </div>
+                            <h4 class="mt-3"><a href="">Project's Title</a></h4>
+                            <p class="text-danger">Deadline: 10 May, 2020<p>
+                            <p class="mt-3">{% lorem 1 b random %}</p>
+                            <h4 class="mt-3"><a class="text-primary">Requirements</a></h4>
+                            <p class="mt-3">{% lorem 1 b random %}</p>
+                            <div class="d-flex flex-row justify-content-end">
+                                <button class="btn custom-orange-btn-sm">Apply</button>
+                            </div>
+                        </div>
+
+                        <div class="white-container mt-4 mb-5 div-rounded p-4">
+                            <div class="d-flex flex-rows align-items-center">
+                                <a href="#" style="text-align:center;"><img style="height:60px; width:60px;" class="card-img-top rounded-circle" src="/static/assets/images/adidas.png" alt="And this isn&#39;t my nose. This is a false one."></a>
+                                <div class="ml-3">
+                                    <h4 class="mb-2">Company Name</h4>
+                                    <h6 style="color:silver;">Dated: 10 May, 2020</h6>
+                                </div>
+                            </div>
+                            <p class="mt-3">{% lorem 1 b random %}</p>
+                            <img style="height:auto; width:100%;" class="card-img-top" src="/static/assets/demo/photos/image.jpg" alt="And this isn&#39;t my nose. This is a false one.">
+                            <div class="d-flex flex-row justify-content-end mt-3">
+                                <button class="btn custom-orange-btn-sm">Join Webinar</button>
+                            </div>
+                        </div>
+
+                        <div class="white-container mt-4 mb-5 div-rounded p-4">
+                            <div class="d-flex flex-rows align-items-center">
+                                <a href="#" style="text-align:center;"><img style="height:60px; width:60px;" class="card-img-top rounded-circle" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                                <div class="ml-3">
+                                    <h4 class="mb-2">Foundley</h4>
+                                    <h6 style="color:silver;">Dated: 10 May, 2020</h6>
+                                </div>
+                            </div>
+                            <h4 class="mt-3"><a href="">Project's Title</a></h4>
+                            <p class="text-danger">Deadline: 10 May, 2020<p>
+                            <p class="mt-3">{% lorem 1 b random %}</p>
+                            <h4 class="mt-3"><a class="text-primary">Requirements</a></h4>
+                            <p class="mt-3">{% lorem 1 b random %}</p>
+                            <div class="d-flex flex-row justify-content-end">
+                                <button class="btn custom-orange-btn-sm">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-2">
+                <div class="div-rounded white-container p-4">
+                    <h3>Job Opportunities</h3>
+                     <div class="card">
+                        <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                        <div class="card-body card-body-aside d-flex flex-row col-12">
+                            <div class="col-md-12">
+                                <h4><a style="color: #1568ac" href="#">Job Title</a></h4>
+                                <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                <span class="text-primary">Dated: 10 May, 2020</span>
+                            </div>                                 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                        <div class="card-body card-body-aside d-flex flex-row col-12">
+                            <div class="col-md-12">
+                                <h4><a style="color: #1568ac" href="#">Job Title</a></h4>
+                                <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                <span class="text-primary">Dated: 10 May, 2020</span>
+                            </div>                                 
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block">Search Jobs</button>
+                </div>
+
+                <div class="div-rounded white-container p-4 mt-5">
+                    <h3>Top Articles</h3>
+                     <div class="sky border-bottom">
+                        <div class="card-body card-body-aside d-flex flex-row col-12">
+                            <div class="col-md-12">
+                                <h4><a style="color: #1568ac" href="#">Title</a></h4>
+                                <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                <span class="text-primary"><a href="#">Read More</a></span>
+                            </div>                                 
+                        </div>
+                    </div>
+                    <div class="sky border-bottom">
+                        <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                        <div class="card-body card-body-aside d-flex flex-row col-12">
+                            <div class="col-md-12">
+                                <h4><a style="color: #1568ac" href="#">Title</a></h4>
+                                <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                <span class="text-primary"><a href="#">Read More</a></span>
+                            </div>                                 
+                        </div>
+                    </div>
+                    <div class="sky">
+                        <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                        <div class="card-body card-body-aside d-flex flex-row col-12">
+                            <div class="col-md-12">
+                                <h4><a style="color: #1568ac" href="#">Title</a></h4>
+                                <div class="text-muted mb-2">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                                <span class="text-primary"><a href="#">Read More</a></span>
+                            </div>                                 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-rounded white-container p-4 mt-5">
+                    <div class="d-flex flex-row justify-content-center mt-3">
+                        <a href=""><i class="first fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter ml-5"></i></a>
+                        <a href=""><i class="fa fa-instagram ml-5"></i></a>                        
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center mt-3">
+                        <span><a href="">What we do?</a></span>
+                        <span class="ml-4"><a href="">About Us</a></span>
+                        <span class="ml-4"><a href="">How it works?</a></span>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-center mt-3">
+                        <span><a href="">FAQ</a></span>
+                        <span class="ml-4"><a href="">Contact Us</a></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<div>
+
+       
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+    
+            $('#select-beast').selectize({});
+
+        });
+    });
+</script>
+
+<script>
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

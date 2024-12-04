@@ -1,0 +1,146 @@
+        {% if request.user.username == 'foundley'%}
+            <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+                <div class="container">
+                  <div class="row align-items-center ">
+                    {% comment %} <div class="col-lg-3 ml-auto">
+                      <form class="input-icon my-3 my-lg-0">
+                        <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+                        <div class="input-icon-addon">
+                          <i class="fe fe-search"></i>
+                        </div>
+                      </form>
+                    </div> {% endcomment %}
+                    <div class="col-lg order-lg-first navitems">
+                      <ul class="nav nav-tabs border-0 flex-column flex-lg-row justify-content-center">
+                        {% comment %} <li class="nav-item">
+                          <a href="/" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item">
+                          <a href="/dashboard.html" class="nav-link"><i class="fe fe-layout"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/projects.html" class="nav-link"><i class="fe fe-file"></i> Projects</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/applications.html" class="nav-link"><i class="fe fe-grid"></i> Applications</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/deliveries.html" class="nav-link"><i class="fe fe-truck"></i> Deliveries</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/students.html" class="nav-link"><i class="fe fe-users"></i> Students</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/payment.html" class="nav-link"><i class="fe fe-dollar-sign"></i> Payment</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/users.html" class="nav-link"><i class="fe fe-user"></i> Users</a>
+                        </li>
+                        {% comment %} <li class="nav-item">
+                          <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
+                          <div class="dropdown-menu dropdown-menu-arrow">
+                            <a href="/ui-cards.html" class="dropdown-item ">Cards design</a>
+                            <a href="/ui-charts.html" class="dropdown-item ">Charts</a>
+                            <a href="/ui-pricing-cards.html" class="dropdown-item ">Pricing cards</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
+                          <div class="dropdown-menu dropdown-menu-arrow">
+                            <a href="/ui-maps.html" class="dropdown-item ">Maps</a>
+                            <a href="/ui-icons.html" class="dropdown-item ">Icons</a>
+                            <a href="/ui-store.html" class="dropdown-item ">Store</a>
+                            <a href="/ui-blog.html" class="dropdown-item ">Blog</a>
+                            <a href="/ui-carousel.html" class="dropdown-item ">Carousel</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>
+                          <div class="dropdown-menu dropdown-menu-arrow">
+                            <a href="/page-profile.html" class="dropdown-item ">Profile</a>
+                            <a href="/create_user.html"  class="dropdown-item ">Register</a>
+                            <a href="/page-forgot-password.html" class="dropdown-item ">Forgot password</a>
+                            <a href="/error-403.html"   class="dropdown-item ">403 error</a>
+                            <a href="/error-404.html"   class="dropdown-item ">404 error</a>
+                            <a href="/error-500.html"   class="dropdown-item ">500 error</a>
+                            <a href="/page-email.html" class="dropdown-item ">Email</a>
+                            <a href="/page-blank.html" class="dropdown-item ">Empty page</a>
+                            <a href="/page-rtl.html"   class="dropdown-item ">RTL mode</a>
+                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a href="/ui-form-elements.html" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/ui-gallery.html" class="nav-link"><i class="fe fe-image"></i> Gallery</a>
+                        </li> {% endcomment %}
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+          {% else %}
+              <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+                <div class="container">
+                  <div class="row align-items-center ">
+                    {% comment %} <div class="col-lg-3 ml-auto">
+                      <form class="input-icon my-3 my-lg-0">
+                        <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+                        <div class="input-icon-addon">
+                          <i class="fe fe-search"></i>
+                        </div>
+                      </form>
+                    </div> {% endcomment %}
+                    <div class="col-lg order-lg-first navitems">
+                      <ul class="nav nav-tabs border-0 flex-column flex-lg-row justify-content-center">
+                        {% comment %} <li class="nav-item">
+                          <a href="/" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                        </li> {% endcomment %}
+                        <li class="nav-item">
+                          <a href="/home.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/student-index.html" class="nav-link"><i class="fe fe-layout"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/student-projects.html" class="nav-link"><i class="fe fe-file"></i> Projects</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/student-applications.html" class="nav-link"><i class="fe fe-grid"></i> Applications</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/companies.html" class="nav-link"><i class="fe fe-briefcase"></i> Companies</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="/portfolio.html" class="nav-link"><i class="fe fe-folder"></i> Portfolio</a>
+                        </li>                      
+                       
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+          {% endif %}
+                <script>
+                  jQuery(document).ready(function($){
+                    // $('.navitem ul li a').removeClass("active");
+                    // Get current path and find target link
+                    var path = window.location.pathname.split("/").pop();
+                    console.log(path);
+                  
+                    // Account for home page with empty path
+                    if (path == '') {
+                        path = '/';                    
+                    }
+
+
+                    if(path){                                                                  
+                        var target = $('.navitems ul li a[href="/'+path+'"]');
+                        // Add active class to target link
+                        target.addClass('active');
+                    }
+                    
+                  });
+                </script>
+            </div>

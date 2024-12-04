@@ -1,0 +1,167 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Students {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+
+        <div class="page-header d-flex flex-row align-items-center justify-content-between">
+         <h1 class="page-title">
+            Companies
+            </h1>
+              <form class="form-inline">
+                <div class="form-group">
+                  <label class="form-label">Search:</label>
+                  <input style="width: 250px;" class="form-control custom-select ml-2" type="text" />                   
+                </div>   
+              </form>
+        </div>
+
+        <div class="border div-rounded" style="height:auto">
+          <div class="row p-3">            
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Company Name</a></h4>
+                  <h5><a href="#" style="color: #aaa">norma@gmail.com</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                      <a href="/company-profile.html"><button class="btn btn-block btn-outline-primary">See Profile</button></a>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Company Name</a></h4>
+                  <h5><a href="#" style="color: #aaa">john@email.com</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                      <a href="/company-profile.html"><button class="btn btn-block btn-outline-primary">See Profile</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Company Name</a></h4>
+                  <h5><a href="#" style="color: #aaa">john@email.com</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                      <a href="/company-profile.html"><button class="btn btn-block btn-outline-primary">See Profile</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Company Name</a></h4>
+                  <h5><a href="#" style="color: #aaa">john@email.com</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                      <a href="/company-profile.html"><button class="btn btn-block btn-outline-primary">See Profile</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <div class="col-sm-6 col-xl-3">
+              <div class="card">
+                <a href="#" style="text-align:center;margin-top:20px;"><img style="height:120px; width:120px;" class="card-img-top div-rounded" src="/static/assets/images/company_logo.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                <div class="card-body">
+                  <h4><a href="#">Company Name</a></h4>
+                  <h5><a href="#" style="color: #aaa">john@email.com</a></h5>
+                  <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice...</div>
+                  <div class=" pt-4 mt-auto">
+                      <a href="/company-profile.html"><button class="btn btn-block btn-outline-primary">See Profile</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>                                                 
+          </div>
+        </div>        
+    </div>    
+</div>
+
+<br>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

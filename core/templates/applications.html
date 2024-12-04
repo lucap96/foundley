@@ -1,0 +1,258 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Applications {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+        <div class="page-header d-flex flex-row align-items-center justify-content-between">
+            <h1 class="page-title">
+              Applications
+            </h1>  
+            <form class="form-inline">
+                <div class="form-group">
+                  <label class="form-label">Filter:</label>
+                  <select name="beast" id="select-beast" class="form-control custom-select ml-2" style="width: 200px;">
+                    <option value="1">Project Categories</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select name="beast" id="select-beast-2" class="form-control custom-select ml-2" style="width: 200px;">
+                    <option value="1">Last 7 Days</option>
+                    <option value="2">Last 2 Weeks</option>
+                    <option value="3">Last 30 Days</option>
+                    <option value="3">Last 3 Months</option>
+                  </select>
+                </div>
+              </form>          
+        </div>
+
+        <div class="border div-rounded d-flex flex-column" style="height:auto">
+          <div class="row p-3">
+            
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <div class="card-body card-body-aside d-flex flex-row col-12">
+                    <div class="col-md-10">
+                        <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                        <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                        <span>Dated: 10 May, 2020</span>
+                    </div>                                 
+                    <div class="col-md-2">                  
+                        <a href="" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detailApplication">Details</a>
+                        <a href="" class="btn btn-success btn-sm mt-2" data-toggle="modal" data-target="#addToPool">Accept</a>
+                        <a href="" class="btn btn-danger btn-sm mt-2" data-toggle="modal" data-target="#rejectApplication">Reject</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <div class="card-body card-body-aside d-flex flex-row col-12">
+                    <div class="col-md-10">
+                        <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                        <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                        <span>Dated: 10 May, 2020</span>
+                    </div>                                 
+                    <div class="col-md-2">                  
+                        <a href="" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detailApplication">Details</a>
+                        <a href="" class="btn btn-success btn-sm mt-2" data-toggle="modal" data-target="#addToPool">Accept</a>
+                        <a href="" class="btn btn-danger btn-sm mt-2" data-toggle="modal" data-target="#rejectApplication">Reject</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <div class="card-body card-body-aside d-flex flex-row col-12">
+                    <div class="col-md-10">
+                        <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                        <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                        <span>Dated: 10 May, 2020</span>
+                    </div>                                 
+                    <div class="col-md-2">                  
+                        <a href="" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detailApplication">Details</a>
+                        <a href="" class="btn btn-success btn-sm mt-2" data-toggle="modal" data-target="#addToPool">Accept</a>
+                        <a href="" class="btn btn-danger btn-sm mt-2" data-toggle="modal" data-target="#rejectApplication">Reject</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card card-aside">
+                <a href="#" class="card-aside-column" style="background-image: url(/static/assets/demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <div class="card-body card-body-aside d-flex flex-row col-12">
+                    <div class="col-md-10">
+                        <h4><a style="color: #1568ac" href="#">Project's Title</a></h4>
+                        <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>  
+                        <span>Dated: 10 May, 2020</span>
+                    </div>                                 
+                    <div class="col-md-2">                  
+                        <a href="" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#detailApplication">Details</a>
+                        <a href="" class="btn btn-success btn-sm mt-2" data-toggle="modal" data-target="#addToPool">Accept</a>
+                        <a href="" class="btn btn-danger btn-sm mt-2" data-toggle="modal" data-target="#rejectApplication">Reject</a>
+                    </div>
+                </div>
+              </div>
+            </div>                      
+          </div>
+        </div>
+        
+    </div>    
+</div>
+
+<br>
+
+
+
+<!-- Modal -->
+<div class="modal  fade" id="detailApplication" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div  class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Application from John Doe</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body" >
+        <h4 class="modal-title text-primary" id="exampleModalLongTitle">Project Title</h4>
+
+        <p class="mt-4">{% lorem 1 b random %}</p>
+
+        <h5 class="text-primary"><a href="#">See Student's Profile</a></h5>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addToPool">Accept</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#rejectApplication">Reject</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addToPool" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Application from John Doe</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="rejectApplication" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content div-rounded">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLongTitle">Application from John Doe</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label class="form-label">Enter your message <span class="form-label-small">56/100</span></label>
+                <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Message"></textarea>
+            </div>
+        </form>
+      </div>    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger">Reject</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+           
+
+<script>
+   require(['jquery', 'selectize'], function ($, selectize) {
+                  $(document).ready(function () {
+                      $('#input-tags').selectize({
+                          delimiter: ',',
+                          persist: false,
+                          create: function (input) {
+                              return {
+                                  value: input,
+                                  text: input
+                              }
+                          }
+                      });
+              
+                      $('#select-beast').selectize({});
+                      $('#select-beast-2').selectize({});
+
+                });
+   });
+
+    require(['jquery'], function () {
+      $(document).ready(function () {
+    
+        function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+        }
+    
+        if (!getCookie('bottombar-hidden')) {
+          $('.js-bottombar').show();
+        }
+    
+        $('.js-bottombar-close').on('click', function (e) {
+          $('.js-bottombar').hide();
+          setCookie('bottombar-hidden', 1, 7);
+    
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
+
+{% endblock javascripts %}

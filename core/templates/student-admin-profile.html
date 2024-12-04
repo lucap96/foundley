@@ -1,0 +1,162 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Profile {% endblock %} 
+
+{% block content %} 
+
+  <style>
+    a{
+      text-decoration: none !important;
+    }
+  </style>
+
+  <div class="my-3 my-md-5">
+
+    <div class="container">
+        <div class="row d-flex flex-row justify-content-between mb-3 pr-5 pl-5"> 
+            <h1 class="page-title">
+                Profile
+            </h1>
+            {% comment %} <button class="btn custom-orange-btn">Save</button> {% endcomment %}
+        </div>
+        <div class="row">        
+            <div class="col-lg-6 col-sm-12 d-flex flex-column pl-5 pr-5 border-right">                
+                <form class="mt-5">
+                    <div class="form-group">
+                        <label class="form-label">Your Email</label>
+                        <input type="text" class="form-control" name="example-text-input" placeholder="Enter Project's Title" value="john@email.com" disabled>
+                    </div>
+                    <div class="col-12 d-flex flex-row p-0">
+                        <div class="col-md-6 form-group p-0">
+                            <label class="form-label">First Name</label>
+                            <input type="text" name="field-name" class="form-control" placeholder="John" />
+                        </div>   
+                        <div class="col-md-6 form-group pl-1 pr-0">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" name="field-name" class="form-control" placeholder="Doe" />                
+                        </div>                                            
+                    </div>
+                    <div class="col-md-12 form-group p-0">
+                        <label class="form-label">University</label>
+                        <input type="text" name="field-name" class="form-control" placeholder="University" />
+                    </div> 
+                    <div class="col-12 d-flex flex-row p-0">
+                        <div class="col-md-6 form-group p-0">
+                            <label class="form-label">Course of Study</label>
+                            <input type="text" name="field-name" class="form-control" placeholder="Course" />
+                        </div>   
+                        <div class="col-md-6 form-group pl-1 pr-0">
+                            <label class="form-label">Study Year</label>
+                            <input type="text" name="field-name" class="form-control" placeholder="e.g. 2015" />                
+                        </div>                                            
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description <span class="form-label-small">56/100</span></label>
+                        <textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Enter Description"></textarea>
+                    </div>        
+                    <div class="form-group">
+                      <div class="form-label">Upload Profile Picture</div>
+                        <a href="#" style="text-align:center;margin-top:20px;"><img style="height: 200px; width: 200px;" class="card-img-top mb-3" src="/static/assets/demo/faces/female/12.jpg" alt="And this isn&#39;t my nose. This is a false one."></a>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>  
+                    </div>         
+                    <button class="btn custom-orange-btn">Update Changes</button>         
+                </form>           
+
+                <div class="div-rounded card mt-5 p-3">
+                    <form>
+                        <h1 class="page-title">
+                            Delete Account
+                        </h1>
+                        <p>lorem ipsum change password ipsum lorem</p>
+                        <div class="form-group">
+                            <label class="form-label">Enter Your Email</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                                <span class="input-group-append">
+                                    <button class="btn btn-danger" type="button">Delete</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>        
+            <div class="col-lg-6 col-sm-12 d-flex flex-column pl-5 pr-5">
+                <form class="mt-5">
+                    <div class="form-group">
+                        <div class="form-label">Upload Video</div>        
+                        <video width="100%" height="250" controls>
+                            <source src="/static/assets/images/student_video.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>             
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>  
+                    </div>                     
+                </form>  
+                <form class="mt-5">
+                    <h1 class="page-title">
+                        Change Password
+                    </h1>
+                    <p>lorem ipsum change password ipsum lorem</p>
+                    <div class="col-md-10 form-group p-0">
+                        <label class="form-label">Old Password</label>
+                        <input type="text" name="field-name" class="form-control" placeholder="Old Password" />
+                    </div> 
+                    <div class="col-md-10 form-group p-0">
+                        <label class="form-label">New Password</label>
+                        <input type="text" name="field-name" class="form-control" placeholder="New Password" />
+                    </div> 
+                    <div class="col-md-10 form-group p-0">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="text" name="field-name" class="form-control" placeholder="Confirm Password" />
+                    </div>         
+                    <div class="col-md-10 p-0">
+                        <button class="btn custom-orange-btn">Change Password</button>         
+                    </div>
+                </form>         
+            </div>    
+        </div>
+
+        
+    </div>    
+</div>
+
+<br>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+        
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
+    require(['jquery', 'selectize'], function ($, selectize) {
+        $(document).ready(function () {
+            $('#input-tags').selectize({
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+    
+            $('#select-beast').selectize({});
+
+        });
+    });
+</script>
+
+
+{% endblock javascripts %}
